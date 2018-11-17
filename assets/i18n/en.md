@@ -33,4 +33,5 @@ scheduleDisclaimer: "The actual schedule may vary slightly depending on the topi
 instructors: "Instructors"
 helpers: "Helpers"
 tba: "to be announced"
+figures: "List of Figures"
 ---

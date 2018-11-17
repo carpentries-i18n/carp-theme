@@ -33,4 +33,5 @@ scheduleDisclaimer: El horario durante la lección puede variar a según los tem
 instructors: "Instructores"
 helpers: "Ayudantes"
 tba: "Aún pendiente"
+figures: "Lista de figuras"
 ---

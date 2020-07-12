@@ -15,7 +15,7 @@ contribute: Contribuir
 source: Fuente
 cite: Citar
 contact: Contacto
-keypoins: Puntos Clave
+keypoints: Puntos Clave
 overview: Resumen
 break: Pausa
 previous: anterior
@@ -23,7 +23,7 @@ next: siguiente
 episode: episodio
 lessonHome: Inicio de la lección
 teaching: Enseñando
-exercises: Ejercisios
+exercises: Ejercicios
 min: min
 questions: Preguntas
 objectives: Objectivos

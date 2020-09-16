@@ -33,4 +33,5 @@ scheduleDisclaimer: "実際のスケジュールは、インストラクター�
 instructors: "インストラクター"
 helpers: "ヘルパー"
 tba: "すぐに発表される予定です"
+figures: "図表のリスト"
 ---

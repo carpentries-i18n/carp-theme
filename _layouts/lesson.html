@@ -17,5 +17,7 @@ Generate list of episodes and extras for the language shown. - NOTE: _extras nee
 {% assign lang_file = locale | append: '.md' %}
 {% assign data_language = site.pages | where_exp:"page", "page.path contains 'i18n'" | where_exp:"page", "page.path contains lang_file" | first %}
 {% include main_title.html %}
-{{ content }}
+<article>
+  {{ content }}
+</article>
 {% include syllabus.html language=data_language episodes=episodes %}

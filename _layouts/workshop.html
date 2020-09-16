@@ -1,5 +1,8 @@
 ---
 ---
+{% include base_path.html %}
+{% include gh_variables.html %}
+
 {% comment %}
 In which language is the current page? Guess from the path: locale="/<lang>/".
 Load language tockens for menus {{ data_language }}. Translations need to provide a lang.md file that translates what's under _data/language.yaml
@@ -22,7 +25,7 @@ Generate list of episodes and extras for the language shown. - NOTE: _extras nee
 <html lang="{{ locale }}">
   <head>
 
-    <meta name="slug" content="{{site.github.project_title}}" />
+    <meta name="slug" content="{{project_title}}" />
     <meta name="startdate" content="{{page.startdate}}" />
     <meta name="enddate" content="{{page.enddate}}" />
     <meta name="humandate" content="{{page.humandate}}" />
@@ -35,6 +38,7 @@ Generate list of episodes and extras for the language shown. - NOTE: _extras nee
     <meta name="instructor" content="{{page.instructor|join:'|'}}" />
     <meta name="helper" content="{{page.helper|join:'|'}}" />
     <meta name="contact" content="{{page.email}}" />
+    <meta name="carpentry" content="{{site.carpentry}}"
     {% if page.redirect %}
     <meta http-equiv="refresh" content="0; url={{page.redirect}}" />
     {% endif %}
@@ -44,15 +48,12 @@ Generate list of episodes and extras for the language shown. - NOTE: _extras nee
     <meta http-equiv="last-modified" content="{{ site.time }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/bootstrap.css' | absolute_url }}" />
+
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/bootstrap-theme.css' | absolute_url }}" />
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/lesson.css' | absolute_url }}" />
-    {% if site.carpentry == "swc" %}
-        <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/img/favicon-swc.ico' | absolute_url }}" />
-    {% elsif site.carpentry == "dc" %}
-        <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/img/favicon-dc.ico' | absolute_url }}" />
-    {% elsif site.carpentry == "lc" %}
-        <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/img/favicon-lc.ico' | absolute_url }}" />
-    {% endif %}
+
+    {% include favicons.html %}
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

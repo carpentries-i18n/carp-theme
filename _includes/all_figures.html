@@ -1,0 +1,14 @@
+{% comment %}
+  Display key points of all episodes for reference.
+{% endcomment %}
+<h2>{{ include.language.figures }}</h2>
+  {% for episode in site.episodes %}
+      {% assign images = episode.content | split:"<img " %}
+      {% for image in images %}
+        {% if image contains 'src' %}
+                {% assign html = image | split:"/>" | first %}
+<p><img {{ html }} /> </p>
+<hr/>
+        {% endif %}
+      {% endfor %}
+  {% endfor %}

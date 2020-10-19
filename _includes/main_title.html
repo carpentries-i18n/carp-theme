@@ -2,6 +2,4 @@
   Main title for lesson pages.
 {% endcomment %}
 
-{% include base_path.html %}
-
 <h1 class="maintitle"><a href="{{ page.root }}{% link index.md %}">{{ site.title }}</a>{% if page.title %}{% unless page.path  contains 'index' %}: {{ page.title }}{% endunless %}{% endif %}</h1>

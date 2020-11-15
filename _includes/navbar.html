@@ -33,8 +33,11 @@
       </a>
       {% endif %}
 
-      {% comment %} Always show link to home page. {% endcomment %}
-      {% assign indexurl = include.pathLocale | append: "index/" | absolute_url %}
+      {% comment %} Always show link to home page.
+      For this to work on any language we need to set the permalink of the languages to be:
+      `lang`/index.html
+      {% endcomment %}
+      {% assign indexurl = include.pathLocale | absolute_url %}
       <a class="navbar-brand" href="{{ indexurl }}">{{ include.language.index }}</a>
 
     </div>
